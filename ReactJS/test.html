@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>thenewboston</title>
+    <script src="js/react.min.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="js/browser.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="content"></div>
+
+    <script type="text/jsx">
+
+        var Comment = React.createClass({
+          edit:function(){
+            console.log("Editing");
+          },
+          remove:function(){
+            console.log("Removing");
+          },
+            render: function() {
+                return (
+                  <div className="componentClass">
+                  <div>This is a simple text</div>
+                  <button onClick={this.edit} className="btn-primary">Edit</button>
+                  <button onClick={this.remove} className="btn-danger">Remove</button>
+                  </div>
+
+                );
+            }
+        });
+
+        ReactDOM.render(
+      <div>
+          <Comment>This is comment 1</Comment>
+          <Comment>This is comment 1</Comment>
+          <Comment>This is comment 1</Comment>
+
+
+
+</div>    ,
+           document.getElementById('content'));
+
+    </script>
+
+</body>
+</html>

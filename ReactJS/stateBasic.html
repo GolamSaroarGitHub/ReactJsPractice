@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+        <div id="content"></div>
+
+        <script type="text/babel">
+
+            var checkBox = React.createClass({
+              getInitialState:function () {
+                return {checked:true}
+              },
+                render: function() {
+                  var msg;
+                  if(this.state.checked)
+                {  msg='checked';}
+                  else {
+                    msg='unchecked';
+                  }
+                    return (
+                      <div>
+                      <input type="checkbox" />
+                      <h3>The checkBox is {msg}</h3>
+
+                         </div>
+
+                    );
+                }
+            });
+
+            ReactDOM.render(
+              <checkBox />  ,
+               document.getElementById('content'));
+
+        </script>
+</body>
+</html>

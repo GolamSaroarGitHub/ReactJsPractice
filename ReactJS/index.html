@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- <div id="container"></div>
+
+    <script type="text/babel">
+        ReactDOM.render(
+            <h2>Welcome to React!</h2>,
+            document.getElementById('container')
+        );
+    </script> -->
+
+        <div id="content"></div>
+
+        <script type="text/babel">
+
+            var Comment = React.createClass({
+              edit:function(){
+                alert("Editing");
+              },
+              remove:function(){
+                console.log("Removing");
+              },
+                render: function() {
+                    return (
+                      <div className="componentClass">
+                      <div>This is a simple text</div>
+                      <button onClick={this.edit} className="btn-primary">Edit</button>
+                      <button onClick={this.remove} className="btn-danger">Remove</button>
+                      </div>
+
+                    );
+                }
+            });
+
+            ReactDOM.render(
+          <div>
+              <Comment>This is comment 1</Comment>
+              <Comment>This is comment 1</Comment>
+              <Comment>This is comment 1</Comment>
+
+
+
+    </div>    ,
+               document.getElementById('content'));
+
+        </script>
+</body>
+</html>
